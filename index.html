@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery-3.2.1.min.js"></script>
+    <style>
+        html,body{
+            margin: 40px;
+            background-color: blue;
+        }
+        /* стили для отзывов*/
+        .flex-wrap{
+            display: flex;
+           justify-content: center;
+            margin-top: 40px;
+        }
+        
+        .wrap-button-reviews{
+            display: flex;
+           justify-content: center;
+            margin-top: 40px;
+            height: 40px;
+        }
+        .wrap-reviews{
+            display: flex;
+            justify-content:center;
+          
+            flex-wrap: wrap;
+            width: 1920px;
+        }
+        .img-reviews{
+            width: 100px;
+            
+        }
+        .reviews{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 470px;
+            height: 250px;
+            background-color: white;
+          -webkit-box-shadow: -2px 16px 42px 2px rgba(0,0,0,0.38);
+          -moz-box-shadow: -2px 16px 42px 2px rgba(0,0,0,0.38);
+           box-shadow: -2px 16px 42px 2px rgba(0,0,0,0.38);
+        }
+        .p-reviews{
+          text-align: center;
+        }
+        /* стили для кнопки*/
+        .wrap-button{
+               
+            }
+        .button-reviews{
+            margin: 10px;
+            border: none;
+            background-color: white;
+            width: 12px;
+            height: 11px;
+            border-radius: 200px;
+        }
+        /*
+        .button-reviews:hover{
+            margin: 10px;
+            width: 17px;
+            height: 16px;
+            border: 1px solid black;
+            background-color: yellow;
+            padding-top: -4px;
+           
+        }
+        */
+        #otz-2{
+            margin-top: -32px;
+            z-index: 1;
+           
+        }
+        #otz-1{
+          margin-right: -189px;
+           opacity: 0.9; 
+        }
+        #otz-3{
+          margin-left: -189px;
+              opacity: 0.9; 
+           
+        }
+        a>.button-reviws:visited{
+             margin: 10px;
+            width: 17px;
+            height: 16px;
+            border: 1px solid black;
+            background-color: yellow;
+            padding-top: -4px;
+        }
+        
+        #otz-4{
+           position: absolute; 
+        }
+         #otz-5{
+           position: absolute;
+        }
+    </style>
+</head>
+<body>
+   <div class="flex-wrap">
+    <div class="wrap-reviews">
+        <div id="otz-4" class="reviews">
+            <img class="img-reviews" src="icons-4.png" />
+               <h4>Сергей Шнуров</h4>
+            <p class="p-reviews" >Идейные соображения высшего порядка, а также сложившаяся структура организации обеспечивает широкому кругу (специалистов) участие в формировании соответствующий условий активизации.</p>
+        </div>
+        <div id="otz-1" class="reviews">
+            <img class="img-reviews" src="icons-2.png" />
+            <h4>Петро Пупкин</h4>
+            <p class="p-reviews">Идейные соображения высшего порядка, а также консультация с широким активом требуют определения и уточнения позиций, занимаемых участниками в отношении поставленных задач. Задача организации</p>
+        </div>
+        <div id="otz-2" class="reviews">
+            <img class="img-reviews" src="icons-3.png" />
+               <h4>Павлик Морозов</h4>
+            <p class="p-reviews">На відміну від поширеної думки Lorem Ipsum не є випадковим набором літер. Він походить з уривку класичної латинської літератури 45 року до н.е</p>
+        </div>
+        <div id="otz-3" class="reviews">
+            <img class="img-reviews" src="icons-4.png" />
+               <h4>Лев Толстой</h4>
+            <p class="p-reviews" >С другой стороны дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач</p>
+        </div>
+       
+        <div id="otz-5" class="reviews">
+            <img class="img-reviews" src="icons-4.png" />
+               <h4>Егор Летов</h4>
+            <p class="p-reviews" >Равным образом дальнейшее развитие различных форм деятельности представляет собой интересный эксперимент проверки новых предложений. С другой стороны реализация намеченных плановых заданий</p>
+        </div>
+        </div>
+    </div>
+      <div class="wrap-button-reviews">
+      
+       <button id="b-1" class="button-reviews"></button>
+       <button id="b-2" class="button-reviews"></button>
+       <button id="b-3" class="button-reviews"></button>
+       <button id="b-4" class="button-reviews"></button>
+       <button id="b-5" class="button-reviews"></button>
+        
+    </div>
+    <script>
+      $(document).ready(function(){
+           $('#b-1').on('click',function(){
+             //alert("hello");
+                var one =  $('#otz-1').html();
+                var two =  $('#otz-2').html();
+                var thre =  $('#otz-3').html();
+                var four =  $('#otz-4').html();
+                var five =  $('#otz-5').html();
+               
+               $('#otz-1').empty().append(four);
+               $('#otz-2').empty().append(five);
+               $('#otz-3').empty().append(thre);
+               $('#otz-4').empty().append(one);
+               $('#otz-5').empty().append(two);
+          });
+          
+            $('#b-3').on('click',function(){
+             //alert("hello");
+                var one =  $('#otz-1').html();
+                var two =  $('#otz-2').html();
+                var thre =  $('#otz-3').html();
+               //alert(one);
+               $('#otz-1').empty().append(two);
+               $('#otz-2').empty().append(thre);
+               $('#otz-3').empty().append(one);
+          });
+       
+ 
+      });
+  
+        
+    </script>
+</body>
+</html>
