@@ -51,7 +51,19 @@
         .wrap-button{
                
             }
-        .button-reviews{
+        .button-rev{
+            
+            padding-bottom: 10px !important;
+            border: 2px solid yellow !important;
+            background-color: inherit !important ;
+            width: 18px !important;
+            height: 18px !important;
+            border-radius: 200px;
+            align-items: center;
+        }
+          .button-reviews{
+              display: flex;
+              text-align: center;
             margin: 10px;
             border: none;
             background-color: white;
@@ -95,9 +107,11 @@
         
         #otz-4{
            position: absolute; 
+            visibility: hidden;
         }
          #otz-5{
            position: absolute;
+             visibility: hidden;
         }
     </style>
 </head>
@@ -144,30 +158,49 @@
     <script>
       $(document).ready(function(){
            $('#b-1').on('click',function(){
-             //alert("hello");
+                $('#b-1').addClass("button-rev");
+               $('#b-2').removeClass("button-rev");
+               $('#b-3').removeClass("button-rev");
                 var one =  $('#otz-1').html();
                 var two =  $('#otz-2').html();
                 var thre =  $('#otz-3').html();
                 var four =  $('#otz-4').html();
                 var five =  $('#otz-5').html();
                
-               $('#otz-1').empty().append(four);
-               $('#otz-2').empty().append(five);
-               $('#otz-3').empty().append(thre);
-               $('#otz-4').empty().append(one);
-               $('#otz-5').empty().append(two);
-          });
-          
-            $('#b-3').on('click',function(){
-             //alert("hello");
-                var one =  $('#otz-1').html();
-                var two =  $('#otz-2').html();
-                var thre =  $('#otz-3').html();
-               //alert(one);
                $('#otz-1').empty().append(two);
                $('#otz-2').empty().append(thre);
                $('#otz-3').empty().append(one);
+              
           });
+          
+            $('#b-2').on('click',function(){
+               $('#b-2').addClass("button-rev");
+                $('#b-1').removeClass("button-rev");
+               $('#b-3').removeClass("button-rev");
+                var one =  $('#otz-1').html();
+                var two =  $('#otz-2').html();
+                var thre =  $('#otz-3').html();
+                
+               $('#otz-1').empty().append(thre);
+               $('#otz-2').empty().append(one);
+               $('#otz-3').empty().append(two);
+              
+          });
+          $('#b-3').on('click',function(){
+                $('#b-3').addClass("button-rev");
+              $('#b-1').removeClass("button-rev");
+               $('#b-2').removeClass("button-rev");
+                var one =  $('#otz-1').html();
+                var two =  $('#otz-2').html();
+                var thre =  $('#otz-3').html();
+              
+               //alert(one);
+               $('#otz-1').empty().append(two);
+               $('#otz-2').empty().append(one);
+               $('#otz-3').empty().append(thre);
+              
+          });
+       
        
  
       });
